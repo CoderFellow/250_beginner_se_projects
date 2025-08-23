@@ -1,0 +1,8 @@
+Title: Weather CLI
+
+Description: 
+The weathercli.py app works to retrieve weather data from a third party api.
+
+Installation: None required, all modules and imports accounted for.
+
+API-KEY
