@@ -1,0 +1,13 @@
+How Test Functions Work:
+
+Test Algorithm
+
+The test functions, despite having different goals, all follow the same general procedure. The algorithm for each test is:
+
+    Set Up the Mock: Use the @patch decorator to replace the real aiohttp.ClientSession.get with a mock object. This allows you to control how the network request behaves.
+
+    Configure the Mock: Tell the mock object how to behave. For a successful test, it should return a mock response with a 200 status and some HTML. For an error test, it should be configured to raise a specific exception like a TimeoutError.
+
+    Run the Function: Call the function you want to test (fetch_page or parse_product_data) with the appropriate arguments.
+
+    Assert the Outcome: Use a method like self.assertEqual or self.assertIsNone to check if the function's output matches the expected result.
